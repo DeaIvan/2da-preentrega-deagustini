@@ -33,8 +33,8 @@ export class ProductManager{
             ))
 
             const { totalPages, prevPage, nextPage, hasPrevPage, hasNextPage } = response
-            const prevLink = hasPrevPage ? `localhost:${PORT}/api/products${limit ? `?limit=${limit}` : ""}${page ? `?page=${response.page - 1}` : ""}${sort ? `?sort=${sort}` : ""}` : null
-            const nextLink = hasNextPage ? `localhost:${PORT}/api/products${limit ? `?limit=${limit}` : ""}${page ? `?page=${response.page + 1}` : ""}${sort ? `?sort=${sort}` : ""}` : null
+            const prevLink = hasPrevPage ? `localhost:8080/api/products${limit ? `?limit=${limit}` : ""}${page ? `?page=${response.page - 1}` : ""}${sort ? `?sort=${sort}` : ""}` : null
+            const nextLink = hasNextPage ? `localhost:8080/api/products${limit ? `?limit=${limit}` : ""}${page ? `?page=${response.page + 1}` : ""}${sort ? `?sort=${sort}` : ""}` : null
             
             return { status: 200, ok: true, response: mapped, totalPages, prevPage, nextPage, page: response.page, hasPrevPage, hasNextPage, prevLink, nextLink }
         }catch(error){

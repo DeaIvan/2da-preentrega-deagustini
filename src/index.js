@@ -25,7 +25,7 @@ app.set("views", __dirname + "/views")
 
 mongoose.set("strictQuery", false)
 
-mongoose.connect(`mongodb+srv://${MONGODB_USER}:${MONGODB_PASSWORD}${MONGODB_CLUSTER}/ecommerce?retryWrites=true&w=majority`, error => error && console.error(error))
+mongoose.connect('mongodb+srv://ivandeagustini:1234@cluster0.se1agzq.mongodb.net/?retryWrites=true&w=majority', error => error && console.error(error))
 
 router(app)
 
